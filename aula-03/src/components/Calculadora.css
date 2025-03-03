@@ -1,3 +1,9 @@
-.container-calculadora{
-    background-color: bisque;
+.container-calculadora {
+    background-color: rgb(182, 147, 238);
+    height: 100%;
+    padding-bottom: 15px;
+}
+
+.calcPeso{
+    margin-bottom: 8px;
 }

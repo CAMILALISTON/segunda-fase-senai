@@ -1,34 +1,48 @@
-import React from 'react'
-import './Conversao2.css'
-import { useState } from 'react'
+import './Conversao2.css';
+import { useState } from 'react';
 
 function Conversao2() {
-  const [km, setKm] = useState(0)
-  const [milhas, setMilhas] = useState(0)
-  const [leguas, setLeguas] = useState(0)
+  const [km, setKm] = useState("");
+  const [milhas, setMilhas] = useState(null);
+  const [leguas, setLeguas] = useState(null);
 
-function converterKmParaMilha(){
-    let entrada = Number(prompt("KM "))
-    setMilhas((entrada * 0.6214).toFixed(2))
-    setLeguas((entrada * 0.207).toFixed(2))
-    setKm(entrada)
+  function converterKmParaMilha() {
+    let entrada = parseFloat(km);
+
+    if (isNaN(entrada) || entrada < 0) {
+      alert("Por favor, insira um número válido.");
+      return;
+    }
+
+    setMilhas((entrada * 0.6214).toFixed(2));
+    setLeguas((entrada * 0.207).toFixed(2));
   }
 
   return (
     <div className="container-conversao2">
-      <h2>KM para Milhas para Léguas</h2>
-      <button onClick={converterKmParaMilha}>Converter</button>
-      <p>
-        Distancia original:  {km} Km
-      </p>
-      <p>
-        Distancia convertiva: {milhas} Milhas
-      </p>
-      <p>
-        Distancia convertida: {leguas} Leguas
-      </p>
-    
+      <h2>Conversor de Distância KM / Leguas</h2>
+
+      <input
+        type="number"
+        placeholder="Digite a distância em KM"
+        value={km}
+        onChange={(e) => setKm(e.target.value)}
+        className="valorDist"
+      />
+
+      <div clasName="botaoConversDist">
+        <button onClick={converterKmParaMilha}>Converter</button>
+      </div>
+
+      {milhas !== null && leguas !== null && (
+        <div>
+          <p>Distância original: <strong>{km} km</strong></p>
+          <p>Convertido: <strong>{milhas} Milhas</strong></p>
+          <p>Convertido: <strong>{leguas} Léguas</strong></p>
+        </div>
+      )}
     </div>
-  )
+  );
 }
-export default Conversao2
+
+export default Conversao2;

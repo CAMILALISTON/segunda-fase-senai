@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState} from 'react'
+import './Aviso.css'
 
 function Aviso() {
     const [avisar, setAvisar] = useState(false)
@@ -11,7 +12,7 @@ function Aviso() {
     }
 
   return (
-    <div>
+    <div className="aviso">
         {/* { avisar && <p>Apareceu</p> } */}
         { avisar && <p>
         Celulares e jogos são proibidos no laboratório. 
