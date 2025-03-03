@@ -3,4 +3,6 @@
     margin-top: 25px;
     padding: 12px;
     margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(19, 1, 48);
 }

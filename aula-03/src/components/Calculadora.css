@@ -2,6 +2,8 @@
     background-color: rgb(182, 147, 238);
     height: 100%;
     padding-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(19, 1, 48);
 }
 
 .calcPeso{
