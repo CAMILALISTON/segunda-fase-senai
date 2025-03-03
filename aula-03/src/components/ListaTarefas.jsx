@@ -43,7 +43,7 @@ function ListaTarefas() {
                             onChange={() => alternarConcluida(index)}
                         />
                         <span>{item.texto}</span>
-                        <button onClick={() => removerTarefa(index)}>🗑️</button>
+                        <button onClick={() => removerTarefa(index)} id="botaoExcluir">🗑️</button>
                     </li>
                 ))}
             </ul>
