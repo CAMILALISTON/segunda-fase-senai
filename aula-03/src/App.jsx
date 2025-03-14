@@ -11,6 +11,8 @@ import GeradorSenha from './components/Senha'
 import ContadorTexto from './components/Contador'
 import ConversorEnergia from './components/ConversorEnergia'
 import ListaTarefas from './components/ListaTarefas'
+import AnoBissexto from './components/AnoBissexto'
+import Cronometro from './components/Cronometro'
 
 
 
@@ -18,6 +20,8 @@ function App() {
 
   return (
     <>
+      <Cronometro/>
+      <AnoBissexto/>
       <ListaTarefas/>
       <ConversorEnergia/>
       <ContadorTexto />
